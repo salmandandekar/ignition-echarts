@@ -1,0 +1,19 @@
+{
+  "tooltip": {},
+  "legend": {},
+  "series": [
+    {
+      "type": "pie",
+      "data": [
+        {
+          "name": "Running",
+          "value": 65
+        },
+        {
+          "name": "Idle",
+          "value": 35
+        }
+      ]
+    }
+  ]
+}

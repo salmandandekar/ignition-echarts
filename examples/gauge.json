@@ -1,0 +1,13 @@
+{
+  "series": [
+    {
+      "type": "gauge",
+      "data": [
+        {
+          "name": "Load",
+          "value": 65
+        }
+      ]
+    }
+  ]
+}

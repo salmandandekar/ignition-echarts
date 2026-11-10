@@ -1,0 +1,21 @@
+Ignition ECharts
+Copyright 2026 ignition-echarts contributors
+
+Independent community project; not an official Inductive Automation or Apache
+Software Foundation product. Ignition and Perspective are trademarks of
+Inductive Automation. Apache ECharts is a trademark of the Apache Software Foundation.
+
+This product bundles Apache ECharts (Apache-2.0), zrender (BSD-3-Clause),
+and tslib (0BSD). Complete bundled license texts and notices are
+in mounted/THIRD_PARTY_NOTICES.txt inside the Gateway JAR.
+
+Apache ECharts
+Copyright 2017-2026 The Apache Software Foundation
+This product includes software developed at
+The Apache Software Foundation (https://www.apache.org/).
+
+Architecture references: Inductive Automation ignition-sdk-examples (official
+integration patterns) and Musson Industrial EMBr (MIT, inspected for architecture).
+EMBr source is not bundled. The Gradle wrapper comes from the official example;
+Gradle is distributed under Apache-2.0. Ignition SDK artifacts are compile-only
+and are not redistributed by this module.

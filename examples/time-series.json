@@ -1,0 +1,37 @@
+{
+  "xAxis": {
+    "type": "time"
+  },
+  "yAxis": {
+    "type": "value"
+  },
+  "dataZoom": [
+    {
+      "type": "inside"
+    },
+    {
+      "type": "slider"
+    }
+  ],
+  "series": [
+    {
+      "id": "temperature",
+      "type": "line",
+      "showSymbol": false,
+      "data": [
+        [
+          1700000000000,
+          23
+        ],
+        [
+          1700000060000,
+          24
+        ],
+        [
+          1700000120000,
+          22
+        ]
+      ]
+    }
+  ]
+}

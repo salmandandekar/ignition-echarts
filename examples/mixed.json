@@ -1,0 +1,43 @@
+{
+  "animation": false,
+  "tooltip": {
+    "trigger": "axis"
+  },
+  "xAxis": {
+    "type": "category",
+    "data": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  "yAxis": [
+    {
+      "type": "value"
+    },
+    {
+      "type": "value"
+    }
+  ],
+  "series": [
+    {
+      "id": "output",
+      "type": "bar",
+      "data": [
+        12,
+        20,
+        15
+      ]
+    },
+    {
+      "id": "temperature",
+      "type": "line",
+      "yAxisIndex": 1,
+      "data": [
+        23,
+        24,
+        22
+      ]
+    }
+  ]
+}

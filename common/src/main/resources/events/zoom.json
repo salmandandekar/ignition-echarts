@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "number"
+    },
+    "start": {
+      "type": "number"
+    },
+    "end": {
+      "type": "number"
+    },
+    "startValue": {},
+    "endValue": {},
+    "dataZoomId": {
+      "type": "string"
+    },
+    "batch": {
+      "type": "array"
+    }
+  }
+}

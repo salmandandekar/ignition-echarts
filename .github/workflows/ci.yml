@@ -1,0 +1,40 @@
+name: Development build
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: gradle/actions/setup-gradle@v4
+      - run: npm ci --no-fund
+        working-directory: web
+      - run: npm run lint && npm run typecheck && npm test && npm run build && npm run licenses
+        working-directory: web
+      - run: npm audit --audit-level=moderate
+        working-directory: web
+      - run: npx playwright install --with-deps chromium
+        working-directory: web
+      - run: npm run test:browser
+        working-directory: web
+      - run: node scripts/check-contract.mjs
+      - run: ./gradlew --no-daemon --console=plain :common:compileJava :gateway:compileJava :designer:compileJava zipModule
+      - run: python3 scripts/validate-artifact.py
+      - run: sha256sum build/*.unsigned.modl > build/SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: unsigned-development-module
+          path: |
+            build/*.unsigned.modl
+            build/SHA256SUMS
+          if-no-files-found: error

@@ -1,0 +1,44 @@
+
+> ignition-echarts-web@0.1.0-dev.1 lint
+> eslint src
+
+
+> ignition-echarts-web@0.1.0-dev.1 typecheck
+> tsc --noEmit
+
+
+> ignition-echarts-web@0.1.0-dev.1 test
+> vitest run
+
+
+ RUN  v4.1.12 /workspace/ignition-echarts/web
+
+
+ Test Files  3 passed (3)
+      Tests  27 passed (27)
+   Start at  21:00:09
+   Duration  3.10s (transform 414ms, setup 0ms, import 714ms, tests 241ms, environment 2.83s)
+
+
+> ignition-echarts-web@0.1.0-dev.1 build
+> npm run typecheck && vite build
+
+
+> ignition-echarts-web@0.1.0-dev.1 typecheck
+> tsc --noEmit
+
+vite v7.3.8 building client environment for production...
+transforming...
+✓ 594 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/IgnitionECharts.css    0.42 kB │ gzip:   0.25 kB
+dist/IgnitionECharts.js   766.56 kB │ gzip: 259.56 kB
+✓ built in 7.56s
+
+> ignition-echarts-web@0.1.0-dev.1 licenses
+> node ../scripts/collect-licenses.mjs
+
+Collected licenses and notices for: echarts@6.1.0, tslib@2.3.0, zrender@6.1.0
+found 0 vulnerabilities
+Property, component ID, event and example contracts consistent (not an SDK integration test)

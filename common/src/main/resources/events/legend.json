@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string"
+    },
+    "selected": {
+      "type": "object"
+    }
+  }
+}

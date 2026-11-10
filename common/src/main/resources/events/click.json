@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "number"
+    },
+    "componentType": {
+      "type": "string"
+    },
+    "seriesType": {
+      "type": "string"
+    },
+    "seriesIndex": {
+      "type": "number"
+    },
+    "seriesName": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "dataIndex": {
+      "type": "number"
+    },
+    "value": {}
+  }
+}

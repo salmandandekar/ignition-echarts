@@ -1,0 +1,94 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "option": {
+      "type": "object",
+      "additionalProperties": true,
+      "default": {
+        "title": {
+          "text": "ECharts"
+        },
+        "tooltip": {
+          "trigger": "axis"
+        },
+        "xAxis": {
+          "type": "category",
+          "data": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        "yAxis": {
+          "type": "value"
+        },
+        "series": [
+          {
+            "id": "values",
+            "name": "Values",
+            "type": "line",
+            "data": [
+              12,
+              20,
+              15
+            ]
+          }
+        ]
+      },
+      "description": "JSON ECharts options; no executable functions, external images or navigation links."
+    },
+    "updateMode": {
+      "type": "string",
+      "enum": [
+        "replace",
+        "merge",
+        "replaceMerge"
+      ],
+      "default": "replace"
+    },
+    "theme": {
+      "type": "string",
+      "enum": [
+        "light",
+        "dark",
+        "auto"
+      ],
+      "default": "light"
+    },
+    "renderer": {
+      "type": "string",
+      "enum": [
+        "canvas",
+        "svg"
+      ],
+      "default": "canvas"
+    },
+    "loading": {
+      "type": "boolean",
+      "default": false
+    },
+    "exportEnabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "eventsEnabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "accessibleLabel": {
+      "type": "string",
+      "default": "Chart. Provide equivalent data in a table."
+    },
+    "emptyText": {
+      "type": "string",
+      "default": "No data"
+    },
+    "style": {
+      "$ref": "urn:ignition-schema:schemas/style-properties.schema.json",
+      "default": {
+        "classes": ""
+      }
+    }
+  }
+}

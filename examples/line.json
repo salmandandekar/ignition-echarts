@@ -1,0 +1,29 @@
+{
+  "animation": false,
+  "tooltip": {
+    "trigger": "axis"
+  },
+  "xAxis": {
+    "type": "category",
+    "data": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  "yAxis": {
+    "type": "value"
+  },
+  "series": [
+    {
+      "id": "samples",
+      "type": "line",
+      "name": "Values",
+      "data": [
+        12,
+        20,
+        15
+      ]
+    }
+  ]
+}

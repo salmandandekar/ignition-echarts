@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Bundle contract fixture</title><div id="root"></div>
+<script type="module">
+import React from 'react';
+import ReactDOM from 'react-dom';
+window.React = React; window.ReactDOM = ReactDOM;
+window.registeredTypes = [];
+window.PerspectiveClient = {
+  Component: React.Component,
+  ComponentRegistry: { register(meta) {
+    window.registeredTypes.push(meta.getComponentType());
+    const props = meta.getPropsReducer({read: (_path, fallback) => fallback});
+    ReactDOM.render(React.createElement(meta.getViewComponent(), {
+      props, emit: () => ({style: {height: 420, width: 800}}), componentEvents: {fireComponentEvent() {}}
+    }), document.getElementById('root'));
+  }}
+};
+const css = document.createElement('link'); css.rel='stylesheet'; css.href='/dist/IgnitionECharts.css'; document.head.append(css);
+const script = document.createElement('script'); script.src='/dist/IgnitionECharts.js'; document.body.append(script);
+</script></html>

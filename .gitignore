@@ -1,0 +1,13 @@
+.gradle/
+**/build/
+**/node_modules/
+web/dist/
+web/playwright-report/
+web/test-results/
+.local/
+sign.props
+*.keystore
+*.pfx
+*.pem
+**/__pycache__/
+*.pyc

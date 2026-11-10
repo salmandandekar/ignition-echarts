@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const schema = JSON.parse(fs.readFileSync('common/src/main/resources/echarts.props.json'));
+const integration = fs.readFileSync('web/src/perspective.tsx', 'utf8');
+for (const key of Object.keys(schema.properties).filter(k => k !== 'style')) assert.ok(integration.includes(`tree.read('${key}'`), `Unmapped property ${key}`);
+const java = fs.readFileSync('common/src/main/java/io/github/salmandandekar/echarts/common/EChartsComponent.java', 'utf8');
+assert.ok(java.includes('community.echarts.chart') && integration.includes('community.echarts.chart'));
+for (const event of ['onChartClick', 'onDataZoom', 'onLegendSelectChanged']) assert.ok(java.includes(event) && fs.readFileSync('web/src/echarts/ChartController.ts', 'utf8').includes(event));
+for (const example of fs.readdirSync('examples').filter(f => f.endsWith('.json'))) JSON.parse(fs.readFileSync(`examples/${example}`));
+console.log('Property, component ID, event and example contracts consistent (not an SDK integration test)');

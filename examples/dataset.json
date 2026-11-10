@@ -1,0 +1,35 @@
+{
+  "dataset": {
+    "source": [
+      [
+        "name",
+        "value"
+      ],
+      [
+        "A",
+        12
+      ],
+      [
+        "B",
+        20
+      ],
+      [
+        "C",
+        15
+      ]
+    ]
+  },
+  "xAxis": {
+    "type": "category"
+  },
+  "yAxis": {},
+  "series": [
+    {
+      "type": "bar",
+      "encode": {
+        "x": "name",
+        "y": "value"
+      }
+    }
+  ]
+}

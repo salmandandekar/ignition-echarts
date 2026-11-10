@@ -1,0 +1,30 @@
+
+> ignition-echarts-web@0.1.0-dev.1 typecheck
+> tsc --noEmit
+
+
+> ignition-echarts-web@0.1.0-dev.1 lint
+> eslint src
+
+
+> ignition-echarts-web@0.1.0-dev.1 test:browser
+> playwright test
+
+[2m[WebServer] [22m(node:5623) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 7 tests using 1 worker
+
+(node:5643) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:5643) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 browser/chart.spec.ts:16:7 › canvas: core and advanced charts render, update and clean up (3.0s)
+  ✓  2 browser/chart.spec.ts:16:7 › svg: core and advanced charts render, update and clean up (2.0s)
+  ✓  3 browser/chart.spec.ts:38:5 › replacement removes stale series; invalid options recover; tooltips never create HTML (1.2s)
+  ✓  4 browser/chart.spec.ts:52:5 › real click events and responsive resizing retain the chart (994ms)
+  ✓  5 browser/chart.spec.ts:62:5 › production UMD bundle registers and uses host React (structural fixture) (992ms)
+  ✓  6 browser/chart.spec.ts:70:5 › two real charts update independently without recreating their instances (702ms)
+  ✓  7 browser/chart.spec.ts:81:5 › SVG image export produces an actual downloadable SVG (737ms)
+
+  7 passed (14.0s)

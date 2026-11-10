@@ -1,0 +1,5 @@
+.ie-chart { position: relative; width: 100%; height: 100%; min-width: 0; min-height: 0; }
+.ie-chart-surface { width: 100%; height: 100%; }
+.ie-chart-status { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 1rem; pointer-events: none; font: inherit; }
+.ie-chart-export { position: absolute; top: .5rem; right: .5rem; cursor: pointer; }
+.ie-chart-export:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
